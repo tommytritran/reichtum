@@ -15,5 +15,9 @@ class User (
 
     @ManyToOne
     @JoinColumn(name = "employeeTypeID")
-    val employeeType: EmployeeType
+    val employeeType: EmployeeType,
+
+    @ManyToOne
+    @JoinColumn(name = "sectorID")
+    val sector:Sector
 )
