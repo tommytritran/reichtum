@@ -1,6 +1,5 @@
 package no.tran.reichtum.data
 
-import com.fasterxml.jackson.annotation.JsonProperty
 import javax.persistence.*
 
 @Entity
@@ -12,5 +11,9 @@ class User (
 
     @ManyToOne
     @JoinColumn(name = "regionID")
-    val region:Region
+    val region:Region,
+
+    @ManyToOne
+    @JoinColumn(name = "employeeTypeID")
+    val employeeType: EmployeeType
 )
