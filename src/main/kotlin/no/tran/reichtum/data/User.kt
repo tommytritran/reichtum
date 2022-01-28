@@ -23,5 +23,8 @@ class User (
 
     @ManyToOne
     @JoinColumn(name = "ageRangeID")
-    val ageRange:AgeRange
+    val ageRange:AgeRange,
+
+    @Column
+    val experience:Int
 )
