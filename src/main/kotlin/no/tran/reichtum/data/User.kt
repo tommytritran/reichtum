@@ -19,5 +19,9 @@ class User (
 
     @ManyToOne
     @JoinColumn(name = "sectorID")
-    val sector:Sector
+    val sector:Sector,
+
+    @ManyToOne
+    @JoinColumn(name = "ageRangeID")
+    val ageRange:AgeRange
 )
