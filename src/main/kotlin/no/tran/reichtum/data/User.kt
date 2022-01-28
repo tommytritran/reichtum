@@ -11,24 +11,30 @@ class User (
 
     @ManyToOne
     @JoinColumn(name = "regionID")
-    val region:Region,
+    val region:Region?,
 
     @ManyToOne
     @JoinColumn(name = "employeeTypeID")
-    val employeeType: EmployeeType,
+    val employeeType: EmployeeType?,
 
     @ManyToOne
     @JoinColumn(name = "sectorID")
-    val sector:Sector,
+    val sector:Sector?,
 
     @ManyToOne
     @JoinColumn(name = "ageRangeID")
-    val ageRange:AgeRange,
+    val ageRange:AgeRange?,
 
     @Column
-    val experience:Int,
+    val experience:Int?,
 
     @ManyToOne
     @JoinColumn(name = "occupationID")
-    val occupation: Occupation
+    val occupation:Occupation?,
+
+    @Column
+    val salary:Double?,
+
+    @Column
+    val bonus:Boolean?
 )
