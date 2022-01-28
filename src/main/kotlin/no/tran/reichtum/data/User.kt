@@ -26,5 +26,9 @@ class User (
     val ageRange:AgeRange,
 
     @Column
-    val experience:Int
+    val experience:Int,
+
+    @ManyToOne
+    @JoinColumn(name = "occupationID")
+    val occupation: Occupation
 )
